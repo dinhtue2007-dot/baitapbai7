@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Đánh Giá Học Tập Sinh Viên ICTU</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 450px;
+        }
+
+        .system-table {
+            width: 100%;
+            border-collapse: collapse; 
+        }
+
+        .system-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .system-table td {
+            padding: 10px 0;
+        }
+
+        .input-style {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box; 
+        }
+
+        .btn-style {
+            width: 100%;
+            padding: 12px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-style:hover {
+            background-color: #004085;
+        }
+
+        .output-style {
+            width: 100%;
+            min-height: 50px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 12px;
+            box-sizing: border-box;
+            background-color: #fafafa;
+            font-size: 14px;
+            color: #333;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <table class="system-table">
+            <thead>
+                <tr>
+                    <th class="system-title">Hệ Thống Đánh Giá Học Tập Sinh Viên ICTU</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>
+                        <input type="text" id="studentName" class="input-style" placeholder="Họ tên sinh viên">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="number" id="score" class="input-style" placeholder="Nhập điểm (0 - 10)" min="0" max="10" step="0.1">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <button id="btnResult" class="btn-style">Xem kết quả</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <!-- Đã thêm div#result để hiển thị kết quả -->
+                        <div id="result" class="output-style"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
